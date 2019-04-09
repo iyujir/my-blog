@@ -1,0 +1,50 @@
+.about{
+	padding:0 1.8rem;
+}
+.about h2{
+	font-size:1.8rem;
+	line-height:4.0rem;
+	text-indent:0.3rem;
+}
+.about p.declaration{
+	font-size:0.8rem;
+	line-height:1.2rem;
+	text-indent:0.3rem;
+	color: red;
+	margin-bottom: 0.6rem;
+}
+.about h3{
+	font-size:1.4rem;
+	line-height:3.0rem;
+	text-indent:0.3rem;
+}
+.about .info li p{
+	font-size:0.8rem;
+	line-height:1.4rem;
+	margin-bottom: 0.6rem;
+}
+}
+.about .work li b{
+	line-height:1.5rem;
+	font-size:0.8rem;
+	font-weight:normal;
+}
+.about .work li b{
+	line-height:1.5rem;
+	font-size:0.8rem;
+	color:gold;
+}
+.about .work li span{
+	line-height:1.5rem;
+	font-size:0.8rem;
+	margin-left:0.4rem;
+}
+@media screen and (min-width:1024px){
+}
+@media screen and (max-width:1024px){
+}
+@media screen and (max-width:768px){
+	.about{
+		padding:0 0.8rem;
+	}
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}友情链接--小喻的博客{% endblock title %}
+
+
+{% block section %}
+<div class="link">
+    <h2>友链</h2>
+    <ul>
+        {% for link in links %}
+            <li><a href="{{ link.urls_link }}" target="_blank">{{ link.name }}</a>
+                {% if  link.desc %}
+                 <span>（{{ link.desc }}）</span>
+                {% endif %}
+            </li>
+
+        {% endfor %}
+
+
+    </ul>
+</div>
+
+
+{% endblock section %}

@@ -1,0 +1,30 @@
+#main {
+	-webkit-overflow-scrolling: touch;
+	width:calc(100% - 240px);
+	position:absolute;
+	left:12.0rem;
+
+}
+
+
+@media screen and (min-width:1024px){
+
+
+}
+
+@media screen and (max-width:1024px){
+	#main {
+		width:calc(100% - 70px);
+		left:3.5rem;
+	}
+
+}
+
+@media screen and (max-width:768px){
+	#main {
+		width:100%;
+		left:0.0rem;
+		top:2.5rem;
+	}
+
+}
