@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{% endblock title %}
+
+
+{% block section %}
+    <div class="article">
+        {% block article %}
+
+        {%autoescape off%}
+        {{ page.body }}
+        {%endautoescape%}
+
+        {% endblock article %}
+
+    </div>
+{% endblock section %}

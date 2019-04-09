@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}友情链接--小喻的博客{% endblock title %}
+
+
+{% block section %}
+<ul class="about">
+    <h2>关于</h2>
+    <p class="declaration">声明：本站所有文章均为本人原创，仅代表个人思想，与其他任何人或组织无关！</p>
+    <li class="info">
+        <h3>个人介绍</h3>
+        <ul>
+        {% for info in infos %}
+            <li><p>{{ info.p }}</p>
+            </li>
+
+        {% endfor %}
+        </ul>
+    </li>
+
+    <li class="work">
+        <h3>工作经历</h3>
+        <ul>
+        {% for work in works %}
+            <li><b>{{ work.company }}</b><span>{{ work.job }}</span><span>{{ work.start_time|date:"Y/m/d" }}-{{ work.end_time|date:"Y/m/d" }}</span>
+            </li>
+        {% endfor %}
+        </ul>
+    </li>
+
+    <li>
+        <h3>项目经历</h3>
+        <ul class="project">
+        {% for project in projects %}
+            <li><a href="{{ project.urls_link }}" target="_blank">{{ project.name }}</a>
+                {% if  project.desc %}
+                    --<span>{{ project.desc }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    </li>
+
+</ul>
+
+
+{% endblock section %}

@@ -1,0 +1,41 @@
+.guidang{
+	padding:0 1.8rem;
+}
+.guidang h2{
+	font-size:1.8rem;
+	line-height:4.0rem;
+	text-indent:0.5rem;
+}
+.guidang ul h3{
+	font-size:1.2rem;
+	line-height:3.0rem;
+}
+
+.guidang ul li ol li a{
+	display:inline-block;
+	font-size:0.8rem;
+	line-height:1.3rem;
+	color:#249cf0;
+	text-indent:0.3rem;
+}
+.guidang ul li ol li span{
+	padding-left:1.0rem;
+	font-size:0.6rem;
+	color:gold;
+	color:#999;
+}
+
+@media screen and (min-width:1024px){
+
+
+}
+
+@media screen and (max-width:1024px){
+
+}
+
+@media screen and (max-width:768px){
+	.guidang{
+		padding:0 0.8rem;
+	}
+}

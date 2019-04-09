@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}小喻的博客{% endblock title %}
+
+
+{% block section %}
+    {% for contact in contacts %}
+    <article class="page clearfix">
+        <h1 class="title">
+            <a href="{% url 'article:article' contact.id %}">{{ contact.title }}</a>
+        </h1>
+
+        <div class="page-content">
+            <p>{{ contact.abstract_non }}<a href="{% url 'article:article' contact.id %}">阅读全文&gt&gt</a></p>
+        </div>
+
+        <div class="pageDesc clearfix">
+            <div class="line1">
+                <span class="author">{{ contact.author }}</span>
+                <span>发布于</span>
+                <span class="date">{{ contact.create_time }}</span>
+                <span>阅读(346)</span>
+                <span>评论(0)</span>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+
+
+    <div  class="page-contorl">
+        {% if contacts.has_previous %}
+            <a class="page-ident" href="/index{{ contacts.previous_page_number }}">&lt;上一页</a>
+        {% endif %}
+
+        <div class="page-list">
+            {% for pindex in contacts.paginator.page_range %}
+                {% if pindex == contacts.number %}
+                    <span>{{ pindex }}</span>
+                {% else %}
+                    <a href="/index{{ pindex }}">{{ pindex }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        {% if contacts.has_next %}
+            <a class="page-prev" href="/index{{ contacts.next_page_number }}">下一页&gt;&gt;</a>
+        {% endif %}
+
+    </div>
+
+
+
+
+{% endblock section %}
